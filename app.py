@@ -1,13 +1,20 @@
 import requests
 import json, sys
 
-if not len(sys.argv) == 2:
-    print("usage: python3 app.py arg(movie name)")
+if not len(sys.argv) == 3:
+    print("usage: python3 app.py arg(movie name) api_key")
     sys.exit()
 
 parameters = {}
 parameters['t'] = sys.argv[1]
-response = requests.get("http://www.omdbapi.com/?apikey=aa38cdb2&", params=parameters)
+api_key = sys.argv[2]
+response = requests.get("http://www.omdbapi.com/?apikey=" + api_key + "&", params=parameters)
+code = response.status_code
+if code == 200:
+    print("request success: " + str(code))
+else:
+    print("request failed: " + str(code))
+    sys.exit()    
 data2json = json.dumps(response.json(), sort_keys=True, indent=4)
 data2dict = json.loads(data2json)
 var = data2dict['Ratings']
