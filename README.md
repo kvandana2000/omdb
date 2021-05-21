@@ -33,6 +33,5 @@ It produces output as response code and rating of the movie as below:
 docker run  anup/myapp:latest python /app/app.py avengers aa38cdb2
 
 output:
-request success: 200
 Rotten Tomatoes rating :91%
 ```
