@@ -1,7 +1,7 @@
-# omdb api access script
+# Omdb api access script
 
-This script helps you to access OMDB Movie database API and return movie rating
-api key need to be generated from http://www.omdbapi.com/ and then should be passed as argument to this program
+This script helps you to access OMDB Movie database API and return movie rating.
+Api key need to be generated from http://www.omdbapi.com/ and then should be passed as argument to this program
 
 ### Execution
 
@@ -25,7 +25,7 @@ docker run mycustomimage:tag python /app/app.py avengers  api_key
 
 ```
 
-### Sample Example*
+### Sample Example
 
 ``` sh
 It produces output as response code and rating of the movie as below
