@@ -2,7 +2,9 @@ import requests
 import json, sys
 
 if not len(sys.argv) == 3:
-    print("usage: python3 app.py arg(movie name) api_key")
+    print("please pass movie title and api key as arguments. For ref check below example")
+    print("**********Example********")
+    print("docker run mycustomimage:tag python /app/app.py avengers  api_key")
     sys.exit()
 
 parameters = {}
