@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nuhaomdb 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nuhaomdb
+  template:
+    metadata:
+      labels:
+        app: nuhaomdb 
+    spec:
+      containers:
+        - name: nuhaomdb 
+          image: ynregistry.azurecr.io/nuhaomdb
+          ports:
+          - containerPort: 5000
