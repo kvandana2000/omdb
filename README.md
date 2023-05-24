@@ -3,7 +3,7 @@
 This script helps you to access OMDB Movie database API and return movie rating.
 Api key need to be generated from http://www.omdbapi.com/ and then should be passed as argument to this program
 
-### Execution
+### Execution ##
 
 Make sure that you have docker installed on your linux box in order to run the below code
 
